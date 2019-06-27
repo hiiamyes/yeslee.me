@@ -13,4 +13,4 @@ jobs:
           yarn run build
           ssh-keyscan $LINODE_IP >> ~/.ssh/known_hosts
           ssh yes@$LINODE_IP 'mkdir -p ~/app/yeslee.me'
-          scp -pr ./public/* yes@LINODE_IP:~/app/yeslee.me
+          scp -pr ./public/* yes@$LINODE_IP:~/app/yeslee.me
