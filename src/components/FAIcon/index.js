@@ -17,7 +17,12 @@ library.add(faGithub)
 
 const FAIcon = props => {
   const { style, icon } = props
-  return <FontAwesomeIcon style={style} icon={icon} />
+  return (
+    <FontAwesomeIcon
+      style={{ width: "32px", height: "32px", ...style }}
+      icon={icon}
+    />
+  )
 }
 
 export const FAIconButton = props => {
