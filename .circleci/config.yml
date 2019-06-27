@@ -5,7 +5,7 @@ jobs:
       only:
         - master
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:10.16.0
     steps:
       - checkout
       - run: |
