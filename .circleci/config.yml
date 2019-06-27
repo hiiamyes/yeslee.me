@@ -9,6 +9,7 @@ jobs:
     steps:
       - checkout
       - run: |
+          yarn
           yarn run build
           ssh-keyscan $LINODE_IP >> ~/.ssh/known_hosts
           ssh yes@$LINODE_IP 'mkdir -p ~/app/yeslee.me'
