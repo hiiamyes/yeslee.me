@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - master
+    docker:
+      - image: circleci/node:7.10
+    steps:
+      - checkout
+      - run: |
+          yarn run build
+          ssh-keyscan $LINODE_IP >> ~/.ssh/known_hosts
+          ssh yes@$LINODE_IP 'mkdir -p ~/app/yeslee.me'
+          scp -pr ./public/* yes@LINODE_IP:~/app/yeslee.me
