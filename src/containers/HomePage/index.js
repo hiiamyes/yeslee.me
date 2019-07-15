@@ -12,13 +12,23 @@ class HomePage extends Component {
         <p>Frontend Engineer in Taiwan</p>
         <p>
           <a
-            href="http://hiking-itinerary.hiiamyes.com"
+            href="https://hiking-itinerary.hiiamyes.com"
             target="_blank"
             rel="noopener noreferrer"
           >
             Hiking Itinerary Generator
           </a>
           {`: A website for hikers to plan their mountain hike itinerary in Taiwan.`}
+        </p>
+        <p>
+          <a
+            href="https://frontend-cookbook.yeslee.me"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Frontend Cookbook
+          </a>
+          {`: A frontend UI components cookbook powered by React and Storybook.`}
         </p>
         <div>
           <a
