@@ -6,11 +6,6 @@ services:
     volumes:
       - ./web/src:/app/src
       - "web-buile:/app/build"
-    ports:
-      - "3002:3002"
-    depends_on:
-      - db
-      - api
   rendertron:
     build: ./rendertron
   seo-server:
