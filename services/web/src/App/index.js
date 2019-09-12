@@ -4,7 +4,8 @@ import Style from "./style"
 import profile from "./profile.jpg"
 import FAIcon from "../components/FAIcon"
 
-const title = "Yes Lee"
+const title = "Yes Lee (Tsung Yeh Lee)"
+const description = "Frontend Engineer in Taiwan"
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
         <meta property="og:url" content={`https://yeslee.me`} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={profile} />
       </Helmet>
       {process.env.NODE_ENV === "production" && (
