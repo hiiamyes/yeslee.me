@@ -15,4 +15,4 @@ app.get("*", (request, response) => {
   response.sendFile(path.resolve(__dirname, "../", "build", "index.html"))
 })
 
-app.listen(process.env.PORT)
+app.listen(8088)

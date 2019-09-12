@@ -4,51 +4,35 @@ import Style from "./style"
 import profile from "./profile.jpg"
 import FAIcon from "../components/FAIcon"
 
+const title = "Yes Lee"
+
 const App = () => {
   return (
     <Style className="app">
       <Helmet>
-        <title>Yes Lee</title>
-        {/* <meta charset="utf-8" />
-        <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="%PUBLIC_URL%/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="%PUBLIC_URL%/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="%PUBLIC_URL%/favicon-16x16.png"
-        />
-        <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-        <meta name="theme-color" content="#000000" /> */}
+        <title>{title}</title>
+        <meta charset="utf-8" />
+        <meta name="description" content={title}></meta>
+        <meta property="og:url" content={`https://yeslee.me`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={title} />
+        <meta property="og:image" content={profile} />
       </Helmet>
       {process.env.NODE_ENV === "production" && (
         <Helmet>
-          {/* <script
+          <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-41378150-12"
+            src="https://www.googletagmanager.com/gtag/js?id=UA-41378150-9"
           ></script>
           <script>
             {`
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'UA-41378150-12');
+gtag('config', 'UA-41378150-9');
 `}
-          </script> */}
+          </script>
         </Helmet>
       )}
       <img className="profile" src={profile} alt="profile" />
