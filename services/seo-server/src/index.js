@@ -15,4 +15,6 @@ app.get("*", (request, response) => {
   response.sendFile(path.resolve(__dirname, "../", "build", "index.html"))
 })
 
-app.listen(8088)
+app.listen(8088, () => {
+  console.log("Seo server is now listening on 8088.")
+})
