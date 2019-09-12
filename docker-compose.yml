@@ -1,0 +1,24 @@
+version: "3"
+services:
+  web:
+    build: ./web
+    env_file: ./web/.env
+    volumes:
+      - ./web/src:/app/src
+      - "web-buile:/app/build"
+    ports:
+      - "3002:3002"
+    depends_on:
+      - db
+      - api
+  rendertron:
+    build: ./rendertron
+  seo-server:
+    build: ./seo-server
+    volumes:
+      - ./seo-server/src:/app/src
+      - "web-buile:/app/build"
+    ports:
+      - "8088:8088"
+volumes:
+  web-buile:
