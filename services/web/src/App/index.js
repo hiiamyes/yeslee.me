@@ -13,12 +13,17 @@ const App = () => {
       <Helmet>
         <title>{title}</title>
         <meta charset="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
         <meta name="description" content={title}></meta>
         <meta property="og:url" content={`https://yeslee.me`} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={profile} />
+        
       </Helmet>
       {process.env.NODE_ENV === "production" && (
         <Helmet>
