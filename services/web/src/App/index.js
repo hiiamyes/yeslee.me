@@ -46,6 +46,26 @@ gtag('config', 'UA-41378150-9');
       <p>Frontend Engineer in Taiwan</p>
       <p>
         <a
+          href="https://paaaack.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Paaaack
+        </a>
+        {`: A website for personal asset management.`}
+      </p>
+      <p>
+        <a
+          href="https://pangolin.yeslee.me"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pangolin
+        </a>
+        {`: A website for querying weather history.`}
+      </p>
+      <p>
+        <a
           href="https://hiking-itinerary.hiiamyes.com"
           target="_blank"
           rel="noopener noreferrer"
