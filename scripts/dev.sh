@@ -1,5 +1,5 @@
 #!/bin/sh
-docker-compose up -d db db-migrate api
-cd web
+# docker-compose up -d db db-migrate api
+cd services/web
 yarn
 yarn start
