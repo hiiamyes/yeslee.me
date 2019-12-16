@@ -122,10 +122,15 @@ const peaks = [
 
 const HundredPeaksPage = () => {
   const title = `Yes - ${peaks.length} / 100 Peaks`
+  const description = title
   return (
     <Style>
       <Helmet>
         <title>{title}</title>
+        <meta name="description" content={title}></meta>
+        <meta property="og:url" content="https://yeslee.me/100-peaks" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={cover} />
       </Helmet>
       <div className="cover">
