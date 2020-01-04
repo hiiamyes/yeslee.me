@@ -4,6 +4,7 @@ import Style from "./style"
 import profile from "./profile.jpg"
 import HomePage from "./HomePage"
 import HundredPeaksPage from "./HundredPeaksPage"
+import TrailPage from "./TrailPage"
 import { Switch, Route } from "react-router-dom"
 
 const title = "Yes"
@@ -48,6 +49,9 @@ gtag('config', 'UA-41378150-9');
         </Route>
         <Route path="/100-peaks" exact>
           <HundredPeaksPage />
+        </Route>
+        <Route path="/trails/:name" exact>
+          <TrailPage />
         </Route>
       </Switch>
     </Style>
