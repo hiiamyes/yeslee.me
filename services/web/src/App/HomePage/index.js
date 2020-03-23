@@ -15,7 +15,7 @@ const App = () => {
         </a>
         {`: A website for personal asset management.`}
       </p>
-      <p>
+      {/* <p>
         <a
           href="https://pangolin.yeslee.me"
           target="_blank"
@@ -24,7 +24,7 @@ const App = () => {
           Pangolin
         </a>
         {`: A website for querying weather history.`}
-      </p>
+      </p> */}
       <p>
         <a
           href="https://hiking-itinerary.hiiamyes.com"
@@ -34,6 +34,12 @@ const App = () => {
           Hiking Itinerary Generator
         </a>
         {`: A website for hikers to plan their mountain hike itinerary in Taiwan.`}
+      </p>
+      <p>
+        <a href="/100-peaks" target="_blank" rel="noopener noreferrer">
+          100 Peaks
+        </a>
+        {`: Yes's 100 Peaks.`}
       </p>
       <p>
         <a
