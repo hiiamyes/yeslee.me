@@ -118,6 +118,10 @@ const peaks = [
     name: "畢祿山",
     dates: ["2019-12-14"],
   },
+  {
+    name: "羊頭山",
+    dates: ["2020-03-21"],
+  },
 ]
 
 const HundredPeaksPage = () => {
