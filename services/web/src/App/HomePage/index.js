@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import Style from "./style"
 import profile from "../profile.jpg"
 import FAIcon from "../../components/FAIcon"
@@ -9,6 +10,7 @@ const App = () => {
       <img className="profile" src={profile} alt="profile" />
       <h1 className="title">Yes Lee</h1>
       <p>Frontend Engineer in Taiwan</p>
+      <h2>Project</h2>
       <p>
         <a href="https://paaaack.com" target="_blank" rel="noopener noreferrer">
           Paaaack
@@ -16,6 +18,10 @@ const App = () => {
         {`: A website for personal asset management.`}
       </p>
       <p>
+        <Link to="/trails/yu-shan-main-peak">Trails</Link>
+        {`: Keyboard hiker~!`}
+      </p>
+      {/* <p>
         <a
           href="https://pangolin.yeslee.me"
           target="_blank"
@@ -24,7 +30,7 @@ const App = () => {
           Pangolin
         </a>
         {`: A website for querying weather history.`}
-      </p>
+      </p> */}
       <p>
         <a
           href="https://hiking-itinerary.hiiamyes.com"
