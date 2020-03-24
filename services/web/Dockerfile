@@ -1,5 +1,7 @@
 FROM node:10.16.3-alpine
-WORKDIR /app
+WORKDIR /app/
 COPY . .
 RUN yarn
-CMD ["yarn", "build"]
+RUN yarn build
+EXPOSE 8088
+CMD ["yarn", "start"]

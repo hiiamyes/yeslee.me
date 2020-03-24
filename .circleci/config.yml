@@ -3,7 +3,7 @@ jobs:
   build:
     branches:
       only:
-        - master
+        - qq
     docker:
       - image: circleci/node:10.16.0
     steps:

@@ -1,7 +1,7 @@
-import React from "react"
-import Style from "./style"
-import Helmet from "react-helmet"
-import cover from "./cover.jpg"
+import React from "react";
+import Style from "./style";
+import Helmet from "react-helmet";
+import cover from "./cover.jpg";
 
 const peaks = [
   {
@@ -122,11 +122,11 @@ const peaks = [
     name: "羊頭山",
     dates: ["2020-03-21"],
   },
-]
+];
 
 const HundredPeaksPage = () => {
-  const title = `Yes - ${peaks.length} / 100 Peaks`
-  const description = title
+  const title = `Yes - ${peaks.length} / 100 Peaks`;
+  const description = title;
   return (
     <Style>
       <Helmet>
@@ -147,18 +147,18 @@ const HundredPeaksPage = () => {
       </div>
       <br></br>
       <div className="peaks">
-        {peaks.map(peak => {
-          const { name, dates = [] } = peak
+        {peaks.map((peak) => {
+          const { name, dates = [] } = peak;
           return (
             <div className="peak">
               <div>{name}</div>
               <div>{dates.join(", ")}</div>
             </div>
-          )
+          );
         })}
       </div>
     </Style>
-  )
-}
+  );
+};
 
-export default HundredPeaksPage
+export default HundredPeaksPage;

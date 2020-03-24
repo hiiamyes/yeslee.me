@@ -3,17 +3,7 @@ services:
   web:
     build: ./services/web
     env_file: ./services/web/.env
-    volumes:
-      - ./services/web/src:/app/src
-      - "web-buile:/app/build"
-  rendertron:
-    build: ./services/rendertron
-  seo-server:
-    build: ./services/seo-server
-    volumes:
-      - ./services/seo-server/src:/app/src
-      - "web-buile:/app/build"
     ports:
       - "8088:8088"
-volumes:
-  web-buile:
+  rendertron:
+    build: ./services/rendertron

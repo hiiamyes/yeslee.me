@@ -1,14 +1,14 @@
-import React from "react"
-import Helmet from "react-helmet"
-import Style from "./style"
-import profile from "./profile.jpg"
-import HomePage from "./HomePage"
-import HundredPeaksPage from "./HundredPeaksPage"
-import TrailPage from "./TrailPage"
-import { Switch, Route } from "react-router-dom"
+import React from "react";
+import Helmet from "react-helmet";
+import Style from "./style";
+import profile from "./profile.jpg";
+import HomePage from "./HomePage";
+import HundredPeaksPage from "./HundredPeaksPage";
+import TrailPage from "./TrailPage";
+import { Switch, Route } from "react-router-dom";
 
-const title = "Yes"
-const description = "Frontend Engineer in Taiwan"
+const title = "Yes";
+const description = "Frontend Engineer in Taiwan";
 
 const App = () => {
   return (
@@ -55,7 +55,7 @@ gtag('config', 'UA-41378150-9');
         </Route>
       </Switch>
     </Style>
-  )
-}
+  );
+};
 
-export default App
+export default App;

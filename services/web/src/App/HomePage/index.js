@@ -1,7 +1,7 @@
-import React from "react"
-import Style from "./style"
-import profile from "../profile.jpg"
-import FAIcon from "../../components/FAIcon"
+import React from "react";
+import Style from "./style";
+import profile from "../profile.jpg";
+import FAIcon from "../../components/FAIcon";
 
 const App = () => {
   return (
@@ -36,7 +36,7 @@ const App = () => {
         {`: A website for hikers to plan their mountain hike itinerary in Taiwan.`}
       </p>
       <p>
-        <a href="/100-peaks" target="_blank" rel="noopener noreferrer">
+        <a href="/100-peaks" rel="noopener noreferrer">
           100 Peaks
         </a>
         {`: Yes's 100 Peaks.`}
@@ -94,7 +94,7 @@ const App = () => {
         </a>
       </div>
     </Style>
-  )
-}
+  );
+};
 
-export default App
+export default App;

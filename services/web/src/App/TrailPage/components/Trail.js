@@ -1,13 +1,13 @@
-import { useEffect } from "react"
-import Leaflet from "leaflet"
+import { useEffect } from "react";
+import Leaflet from "leaflet";
 
-let layer = null
+let layer = null;
 
-const Trail = props => {
-  const { map, paths } = props
+const Trail = (props) => {
+  const { map, paths } = props;
   useEffect(() => {
-    if (layer) layer.remove()
-    const qq = paths.map(({ lat, lng }) => [lng, lat])
+    if (layer) layer.remove();
+    const qq = paths.map(({ lat, lng }) => [lng, lat]);
     layer = Leaflet.geoJSON(
       [
         {
@@ -19,11 +19,11 @@ const Trail = props => {
         style: () => ({
           className: "trail",
         }),
-      }
-    )
-    layer.addTo(map)
-  }, [paths])
-  return null
-}
+      },
+    );
+    layer.addTo(map);
+  }, [paths]);
+  return null;
+};
 
-export default Trail
+export default Trail;

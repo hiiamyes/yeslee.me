@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export default styled.div`
   width: 100%;
@@ -34,4 +34,4 @@ export default styled.div`
         Menlo, Courier, monospace;
     }
   }
-`
+`;

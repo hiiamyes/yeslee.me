@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export default styled.div`
   padding: 15px;
@@ -7,4 +7,4 @@ export default styled.div`
     grid: 1fr / repeat(3, max-content);
     grid-gap: 5px;
   }
-`
+`;

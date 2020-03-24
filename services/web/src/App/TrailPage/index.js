@@ -1,24 +1,24 @@
-import React from "react"
-import { Link, useParams } from "react-router-dom"
-import Style from "./style"
-import Elevation from "./components/Elevation"
-import Map from "./components/Map"
-import Trail from "./components/Trail"
-import chilaiMainNorthPeaks from "./datas/chilai-main-north-peaks.json"
-import bilu from "./datas/bilu.json"
-import hehuanWest from "./datas/hehuan-west.json"
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+import Style from "./style";
+import Elevation from "./components/Elevation";
+import Map from "./components/Map";
+import Trail from "./components/Trail";
+import chilaiMainNorthPeaks from "./datas/chilai-main-north-peaks.json";
+import bilu from "./datas/bilu.json";
+import hehuanWest from "./datas/hehuan-west.json";
 
-const tileLayerUrl = `https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=${process.env.MAPBOX_ACCESS_TOKEN}`
+const tileLayerUrl = `https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=${process.env.MAPBOX_ACCESS_TOKEN}`;
 
 const dataMap = {
   "chilai-main-north-peaks": chilaiMainNorthPeaks,
   bilu: bilu,
   "hehuan-west": hehuanWest,
-}
+};
 
-const TrailPage = props => {
-  const { name } = useParams()
-  const { paths, nodes } = dataMap[name]
+const TrailPage = (props) => {
+  const { name } = useParams();
+  const { paths, nodes } = dataMap[name];
   return (
     <Style>
       <div>Trails</div>
@@ -44,7 +44,7 @@ const TrailPage = props => {
         </div>
       </div>
     </Style>
-  )
-}
+  );
+};
 
-export default TrailPage
+export default TrailPage;
