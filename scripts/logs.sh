@@ -1,2 +1,2 @@
 #!/bin/sh
-docker-compose logs -f -t
+docker logs -f -t yeslee-me

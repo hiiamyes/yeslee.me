@@ -6,7 +6,7 @@ const app = express();
 
 app.use(
   rendertron.makeMiddleware({
-    proxyUrl: "http://rendertron:3008/render",
+    proxyUrl: "http://localhost:3008/render",
   }),
 );
 

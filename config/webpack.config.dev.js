@@ -22,6 +22,6 @@ module.exports = merge(baseConfig, {
     ],
     compress: true,
     historyApiFallback: true,
-    port: 3003,
+    port: 8088,
   },
 });

@@ -1,3 +1,3 @@
 #!/bin/sh
-docker-compose stop
-docker container prune -f
+docker stop yeslee-me
+docker rm yeslee-me

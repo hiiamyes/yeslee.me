@@ -1,3 +1,3 @@
 #!/bin/sh
-docker-compose build
+docker build -t yeslee-me .
 docker image prune -f

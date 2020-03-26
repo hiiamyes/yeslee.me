@@ -3,5 +3,12 @@
 ## Getting Started
 
 ```
-./scripts/dev.sh
+./scrtips/dev.sh
+```
+
+## Production run
+
+```
+./scripts/build.sh
+./scripts/start.sh
 ```
