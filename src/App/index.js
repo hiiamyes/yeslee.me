@@ -5,7 +5,8 @@ import profile from "./profile.jpg";
 import HomePage from "./HomePage";
 import HundredPeaksPage from "./HundredPeaksPage";
 import TrailPage from "./TrailPage";
-import { Switch, Route } from "react-router-dom";
+// import PeakPage from "./PeakPage";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 const title = "Yes";
 const description = "Frontend Engineer in Taiwan";
@@ -53,6 +54,7 @@ gtag('config', 'UA-41378150-9');
         <Route path="/trails/:name" exact>
           <TrailPage />
         </Route>
+        <Redirect from="/trails" to="/trails/yangtou" />
       </Switch>
     </Style>
   );

@@ -42,6 +42,12 @@ const App = () => {
         {`: Yes's 100 Peaks.`}
       </p>
       <p>
+        <a href="/trails" rel="noopener noreferrer">
+          Trails
+        </a>
+        {`: Yes's trails.`}
+      </p>
+      <p>
         <a
           href="https://frontend-cookbook.yeslee.me"
           target="_blank"

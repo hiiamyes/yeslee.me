@@ -1,7 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
-const eslintFormatter = require("react-dev-utils/eslintFormatter");
+const Dotenv = require("dotenv-webpack");
+// const eslintFormatter = require("react-dev-utils/eslintFormatter");
 const ModuleScopePlugin = require("react-dev-utils/ModuleScopePlugin");
 const paths = require("./paths");
 const jsRule = require("./rules/js-rule.js");
@@ -93,6 +94,7 @@ module.exports = ({ publicPath }) => {
       new webpack.DefinePlugin({
         "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
       }),
+      new Dotenv(),
     ],
     optimization: {
       splitChunks: {
