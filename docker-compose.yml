@@ -1,9 +1,0 @@
-version: "3"
-services:
-  web:
-    build: ./services/web
-    env_file: ./services/web/.env
-    ports:
-      - "8088:8088"
-  rendertron:
-    build: ./services/rendertron
