@@ -10,6 +10,7 @@ import chilaiMainNorthPeaks from "./datas/chilai-main-north-peaks.json";
 import bilu from "./datas/bilu.json";
 import yangtou from "./datas/yangtou.json";
 import hehuanWest from "./datas/hehuan-west.json";
+import profile from "./profile.jpg";
 
 const tileLayerUrl = `https://api.mapbox.com/styles/v1/mapbox/outdoors-v10/tiles/256/{z}/{x}/{y}?access_token=${process.env.MAPBOX_ACCESS_TOKEN}`;
 
@@ -37,8 +38,11 @@ const TrailPage = (props) => {
         <title>{`${title} . Yes`}</title>
         <meta name="description" content={`${title} . Yes`}></meta>
         <meta property="og:title" content={`${title} . Yes`} />
+        <meta property="og:image" content={profile} />
       </Helmet>
       <div>Trails</div>
+      <br></br>
+
       <div className="trails">
         {Object.keys(TITLE).map((u) => (
           <Link key={u} to={`/trails/${u}`}>
@@ -46,9 +50,15 @@ const TrailPage = (props) => {
           </Link>
         ))}
       </div>
-      <div>
+      <br></br>
+
+      <div className="trail">
+        <img src={profile} alt={title}></img>
+        <br></br>
+        <br></br>
         <Elevation data={paths} nodes={nodes} />
-        <div style={{ width: 640, height: 480 }}>
+        <br></br>
+        <div style={{ width: "100%", height: 480 }}>
           <Map
             key="test"
             tileLayerUrl={tileLayerUrl}

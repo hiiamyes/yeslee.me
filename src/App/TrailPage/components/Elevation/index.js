@@ -13,7 +13,7 @@ let svg;
 const draw = (chartRef, data, nodes) => {
   d3.select(chartRef.current).select("svg").remove();
   const container = {
-    width: window.innerWidth,
+    width: window.innerWidth > 768 ? 768 : window.innerWidth,
     height: 400,
   };
   const chart = {
@@ -104,7 +104,7 @@ const draw = (chartRef, data, nodes) => {
 
 const resize = debounce(150, (data, nodes) => {
   const container = {
-    width: window.innerWidth,
+    width: window.innerWidth > 768 ? 768 : window.innerWidth,
     height: 480,
   };
   const chart = {
