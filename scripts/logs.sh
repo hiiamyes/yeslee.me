@@ -1,2 +1,2 @@
 #!/bin/sh
-docker logs -f -t yeslee-me
+docker logs -f -t yeslee.me
