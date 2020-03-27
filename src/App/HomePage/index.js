@@ -39,13 +39,13 @@ const App = () => {
         <a href="/100-peaks" rel="noopener noreferrer">
           100 Peaks
         </a>
-        {`: Yes's 100 Peaks.`}
+        {`: 100 Peaks of Taiwan.`}
       </p>
       <p>
         <a href="/trails" rel="noopener noreferrer">
           Trails
         </a>
-        {`: Yes's trails.`}
+        {`: Hiking trails in Taiwan.`}
       </p>
       <p>
         <a

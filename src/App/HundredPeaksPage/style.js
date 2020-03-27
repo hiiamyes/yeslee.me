@@ -6,7 +6,20 @@ export default styled.div`
   max-width: 960px;
   margin: 0 auto;
   padding: 15px;
-
+  > .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: black;
+      text-decoration: none;
+    }
+    > .menus {
+      display: flex;
+      > *:nth-of-type(n + 1) {
+        margin-right: 10px;
+      }
+    }
+  }
   .cover {
     width: 100%;
     height: 400px;

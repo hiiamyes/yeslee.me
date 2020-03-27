@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Style from "./style";
 import Helmet from "react-helmet";
 import cover from "./cover.jpg";
@@ -137,6 +138,17 @@ const HundredPeaksPage = () => {
         <meta property="og:description" content={description} />
         <meta property="og:image" content={cover} />
       </Helmet>
+      <div className="nav-bar">
+        <Link to="/" className="home">
+          Yes
+        </Link>
+        <div className="menus">
+          <Link to="/100-peaks">100 Peaks</Link>
+          <Link to="/trails">Trails</Link>
+        </div>
+      </div>
+      <br></br>
+      <br></br>
       <div className="cover">
         <img src={cover} alt="yes"></img>
       </div>
