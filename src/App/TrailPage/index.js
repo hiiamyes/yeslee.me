@@ -37,6 +37,7 @@ const TrailPage = (props) => {
       <Helmet>
         <title>{`${title} . Yes`}</title>
         <meta name="description" content={`${title} . Yes`}></meta>
+        <meta property="og:url" content={`https://yeslee.me/trails/${name}`} />
         <meta property="og:title" content={`${title} . Yes`} />
         <meta property="og:image" content={profile} />
       </Helmet>
