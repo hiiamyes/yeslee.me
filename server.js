@@ -6,7 +6,7 @@ const app = express();
 
 app.use(
   rendertron.makeMiddleware({
-    proxyUrl: "http://yes-rendertron:3008/render",
+    proxyUrl: "http://seo.yeslee.me/render",
   }),
 );
 
