@@ -10,6 +10,7 @@ import chilaiMainNorthPeaks from "./datas/chilai-main-north-peaks.json";
 import bilu from "./datas/bilu.json";
 import yangtou from "./datas/yangtou.json";
 import hehuanWest from "./datas/hehuan-west.json";
+import chilaiSouthPeakNanhuaMountain from "./datas/chilai-south-peak-nanhua-mountain.json";
 import biluP from "./biluP.jpg";
 import yangtouP from "./yangtouP.jpg";
 import chilaimnP from "./chilaimnP.jpg";
@@ -22,6 +23,7 @@ const dataMap = {
   bilu: bilu,
   yangtou: yangtou,
   "hehuan-west": hehuanWest,
+  "chilai-south-peak-nanhua-mountain": chilaiSouthPeakNanhuaMountain,
 };
 
 const TITLE = {
@@ -29,6 +31,7 @@ const TITLE = {
   bilu: "畢祿",
   "hehuan-west": "合歡西",
   yangtou: "羊頭",
+  "chilai-south-peak-nanhua-mountain": "奇萊南華",
 };
 
 const PROFILE = {
@@ -36,6 +39,7 @@ const PROFILE = {
   bilu: biluP,
   "hehuan-west": hehuanwP,
   yangtou: yangtouP,
+  "chilai-south-peak-nanhua-mountain": null,
 };
 
 const TrailPage = (props) => {
@@ -51,7 +55,7 @@ const TrailPage = (props) => {
         <meta property="og:url" content={`https://yeslee.me/trails/${name}`} />
         <meta property="og:title" content={`${title} . Hiiiike`} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={PROFILE[name]} />
+        {PROFILE[name] && <meta property="og:image" content={PROFILE[name]} />}
       </Helmet>
       <div className="nav-bar">
         <Link to="/" className="home">
@@ -75,7 +79,7 @@ const TrailPage = (props) => {
       <br></br>
 
       <div className="trail">
-        <img src={PROFILE[name]} alt={title}></img>
+        {PROFILE[name] && <img src={PROFILE[name]} alt={title}></img>}
         <br></br>
         <br></br>
         <Elevation data={paths} nodes={nodes} />
