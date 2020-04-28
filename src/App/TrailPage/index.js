@@ -11,6 +11,7 @@ import bilu from "./datas/bilu.json";
 import yangtou from "./datas/yangtou.json";
 import hehuanWest from "./datas/hehuan-west.json";
 import chilaiSouthPeakNanhuaMountain from "./datas/chilai-south-peak-nanhua-mountain.json";
+import pingFengShan from "./datas/ping-feng-shan.json";
 import biluP from "./biluP.jpg";
 import yangtouP from "./yangtouP.jpg";
 import chilaimnP from "./chilaimnP.jpg";
@@ -24,6 +25,7 @@ const dataMap = {
   yangtou: yangtou,
   "hehuan-west": hehuanWest,
   "chilai-south-peak-nanhua-mountain": chilaiSouthPeakNanhuaMountain,
+  "ping-feng-shan": pingFengShan,
 };
 
 const TITLE = {
@@ -32,6 +34,7 @@ const TITLE = {
   "hehuan-west": "合歡西",
   yangtou: "羊頭",
   "chilai-south-peak-nanhua-mountain": "奇萊南華",
+  "ping-feng-shan": "屏風山",
 };
 
 const PROFILE = {
@@ -40,6 +43,7 @@ const PROFILE = {
   "hehuan-west": hehuanwP,
   yangtou: yangtouP,
   "chilai-south-peak-nanhua-mountain": null,
+  "ping-feng-shan": null,
 };
 
 const TrailPage = (props) => {
