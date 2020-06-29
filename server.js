@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const rendertron = require("rendertron-middleware");
 const path = require("path");
@@ -15,6 +16,6 @@ app.get("*", (request, response) => {
   response.sendFile(path.resolve(__dirname, "build", "index.html"));
 });
 
-app.listen(8088, () => {
-  console.log("Listening on 8088.");
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on ${process.env.PORT}.`);
 });

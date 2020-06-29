@@ -1,7 +1,7 @@
 const path = require("path");
 const merge = require("webpack-merge");
 const base = require("./webpack.config.base.js");
-const baseConfig = base({ publicPath: "/" });
+const baseConfig = base();
 
 module.exports = merge(baseConfig, {
   mode: "development",
@@ -22,6 +22,6 @@ module.exports = merge(baseConfig, {
     ],
     compress: true,
     historyApiFallback: true,
-    port: 8088,
+    port: process.env.PORT,
   },
 });

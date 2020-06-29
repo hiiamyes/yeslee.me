@@ -3,6 +3,7 @@
 ## Getting Started
 
 ```
+cp .env.template .env
 ./scrtips/dev.sh
 ```
 

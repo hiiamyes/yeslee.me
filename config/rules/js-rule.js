@@ -1,7 +1,9 @@
-module.exports = ({ paths }) => {
+const path = require("path");
+
+module.exports = () => {
   return {
     test: /\.(js|jsx|mjs)$/,
-    include: paths.appSrc,
+    include: path.resolve(__dirname, "../../src"),
     loader: require.resolve("babel-loader"),
     options:
       process.env.NODE_ENV === "production"

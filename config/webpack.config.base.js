@@ -1,10 +1,9 @@
+require("dotenv").config();
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const Dotenv = require("dotenv-webpack");
 // const eslintFormatter = require("react-dev-utils/eslintFormatter");
-const ModuleScopePlugin = require("react-dev-utils/ModuleScopePlugin");
-const paths = require("./paths");
 const jsRule = require("./rules/js-rule.js");
 const cssRule = require("./rules/css-rule.js");
 
@@ -16,20 +15,19 @@ if (!NODE_ENV) {
   );
 }
 
-module.exports = ({ publicPath }) => {
+module.exports = () => {
   return {
     entry: {
       app: path.resolve(__dirname, "../src/index.js"),
     },
     output: {
-      publicPath,
+      publicPath: "/",
       path: path.resolve(__dirname, "../build"),
       filename: "[name].bundle.[hash].js",
     },
     resolve: {
-      modules: ["node_modules", paths.appNodeModules],
+      modules: ["node_modules"],
       extensions: [".js", ".json"],
-      plugins: [new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson])],
       alias: {
         src: path.resolve(__dirname, "../src/"),
       },
@@ -63,7 +61,7 @@ module.exports = ({ publicPath }) => {
                 name: "static/media/[name].[hash:8].[ext]",
               },
             },
-            jsRule({ paths }),
+            jsRule(),
             cssRule({ shouldUseSourceMap }),
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.

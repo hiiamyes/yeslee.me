@@ -5,6 +5,8 @@ import profile from "./profile.jpg";
 import HomePage from "./HomePage";
 import HundredPeaksPage from "./HundredPeaksPage";
 import TrailPage from "./TrailPage";
+import BlogPage from "src/App/BlogPage";
+
 // import PeakPage from "./PeakPage";
 import { Switch, Route, Redirect } from "react-router-dom";
 
@@ -47,6 +49,9 @@ gtag('config', 'UA-41378150-9');
       <Switch>
         <Route path="/" exact>
           <HomePage />
+        </Route>
+        <Route path="/blog" exact>
+          <BlogPage />
         </Route>
         <Route path="/100-peaks" exact>
           <HundredPeaksPage />

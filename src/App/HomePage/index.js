@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import FAIcon from "src/components/FAIcon";
+import profile from "src/App/profile.jpg";
 import Style from "./style";
-import profile from "../profile.jpg";
-import FAIcon from "../../components/FAIcon";
 
 const App = () => {
   return (
@@ -9,6 +10,10 @@ const App = () => {
       <img className="profile" src={profile} alt="profile" />
       <h1 className="title">Yes Lee</h1>
       <p>Frontend Engineer in Taiwan</p>
+      <p>
+        <Link to="/blog">Blog</Link>
+        {`: My blog.`}
+      </p>
       <p>
         <a href="https://paaaack.com" target="_blank" rel="noopener noreferrer">
           Paaaack
@@ -36,15 +41,11 @@ const App = () => {
         {`: A website for hikers to plan their mountain hike itinerary in Taiwan.`}
       </p>
       <p>
-        <a href="/100-peaks" rel="noopener noreferrer">
-          100 Peaks
-        </a>
+        <Link to="/100-peaks">100 Peaks</Link>
         {`: 100 Peaks of Taiwan.`}
       </p>
       <p>
-        <a href="/trails" rel="noopener noreferrer">
-          Trails
-        </a>
+        <Link to="/trails">Trails</Link>
         {`: Hiking trails in Taiwan.`}
       </p>
       <p>

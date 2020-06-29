@@ -1,25 +1,37 @@
-version: 2
+version: 2.1
 jobs:
   build:
-    branches:
-      only:
-        - qq
-    docker:
-      - image: circleci/node:10.16.0
+    machine: true # uses default image circleci/classic:latest
     steps:
       - checkout
-      - run: |
-          ssh-keyscan $LINODE_IP >> ~/.ssh/known_hosts
-          ssh yes@$LINODE_IP << EOF            
-            if [ -d ~/app/yeslee.me ]; then
-              cd ~/app/yeslee.me/
-              git pull
-            else
-              mkdir -p ~/app/
-              cd ~/app/
-              git clone git@github.com:hiiamyes/yeslee.me.git
-              cd yeslee.me/              
-            fi
-            sudo ./scripts/build.sh
-            sudo ./scripts/start.sh
-          EOF
+      - run:
+          command: |
+            curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip -qq awscliv2.zip
+            sudo ./aws/install
+            touch config/.env
+            ./scripts/config.sh
+            ./scripts/push-web.sh
+            ssh-keyscan ${LINODE_IP} >> ~/.ssh/known_hosts 
+            ssh yes@${LINODE_IP} \<< EOF            
+              if [ -d ~/app/yeslee.me ]; then
+                cd ~/app/yeslee.me/
+                git pull
+              else
+                mkdir -p ~/app/
+                cd ~/app/
+                git clone git@github.com:hiiamyes/yeslee.me.git
+                cd yeslee.me/              
+              fi
+              ./scripts/pull-web.sh
+              ./scripts/stop.sh
+              ./scripts/start.sh
+            EOF
+workflows:
+  version: 2
+  release:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master

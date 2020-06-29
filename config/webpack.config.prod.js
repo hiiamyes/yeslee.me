@@ -2,10 +2,8 @@ const path = require("path");
 const merge = require("webpack-merge");
 const TerserPlugin = require("terser-webpack-plugin");
 const base = require("./webpack.config.base.js");
-const paths = require("./paths");
-const publicPath = paths.servedPath;
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== "false";
-const baseConfig = base({ publicPath });
+const baseConfig = base();
 
 if (process.env.NODE_ENV !== "production") {
   throw new Error("Production builds must have NODE_ENV=production.");
@@ -18,7 +16,7 @@ module.exports = merge(baseConfig, {
   output: {
     devtoolModuleFilenameTemplate: (info) =>
       path
-        .relative(paths.appSrc, info.absoluteResourcePath)
+        .relative(path.resolve(__dirname, "../src"), info.absoluteResourcePath)
         .replace(/\\/g, "/"),
   },
   optimization: {
