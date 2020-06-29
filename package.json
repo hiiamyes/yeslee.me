@@ -24,6 +24,7 @@
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "css-loader": "3.4.2",
     "d3": "^5.15.0",
+    "dayjs": "^1.8.28",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "dotenv-webpack": "^1.7.0",
