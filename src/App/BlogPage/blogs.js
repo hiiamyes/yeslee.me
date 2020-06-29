@@ -118,7 +118,7 @@ const blogs = [
     "Sep 2, 2019",
 
     "https://medium.com/@hiiamyes/2020-hokkaido-snowboarding-flight-tpe-to-cts-195e3ec1c0f3",
-    `2020 北海道滑雪機票: 桃園 &gt; 札幌`,
+    `2020 北海道滑雪機票: 桃園 > 札幌`,
 
     `今年 7 月初就排好了明年 228 連假要去 Niseko 滑，而因為先跟了想去住的 Hostel（Tabi-tsumugi Backpackers）的老闆說好了 8 月底會確認訂房，所以最後沒等到樂桃直飛札幌開賣（8/28）就先買了華航（去轉機回直飛）。`,
   ],
@@ -342,7 +342,7 @@ const blogs = [
     "Feb 27, 2018",
     "https://medium.com/@hiiamyes/leaflet-featuregroup-bounds-operation-for-showing-all-markers-on-the-map-5c88301cbb49",
     `[Leaflet] FeatureGroup - bounds operation for showing all markers on the map`,
-    `由於每份行程會包含的地圖範圍並不同（也就是呈現出地圖上所有 marker 所需要的 center 和 zoom 並不同），所以 fixed center &amp; zoom 就無法滿足行程製作上的需求…`,
+    `由於每份行程會包含的地圖範圍並不同（也就是呈現出地圖上所有 marker 所需要的 center 和 zoom 並不同），所以 fixed center & zoom 就無法滿足行程製作上的需求…`,
   ],
   [
     "Feb 20, 2018",
@@ -413,7 +413,7 @@ const blogs = [
   [
     "Aug 9, 2017",
     "https://medium.com/@hiiamyes/way-on-osm-geojson-leaflet-fd0968423674",
-    `Way on OSM =&gt; GeoJSON =&gt; Leaflet`,
+    `Way on OSM => GeoJSON => Leaflet`,
     `標題的中文是 把 OSM 上的路線 (way) 轉成 GeoJSON 後再用 Leaflet 畫到網頁上。`,
   ],
   [
@@ -515,7 +515,7 @@ const blogs = [
   [
     "Jan 10, 2017",
     "https://medium.com/@hiiamyes/deploy-2-domain-name-virtual-host-46511fdbe2b6",
-    `Deploy (2)：Domain Name &amp; Virtual Host`,
+    `Deploy (2)：Domain Name & Virtual Host`,
     `domain name 我是在 GoDaddy 買的，想名字又花了不少時間 XD`,
   ],
   [
