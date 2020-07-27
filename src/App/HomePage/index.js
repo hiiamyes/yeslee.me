@@ -20,6 +20,12 @@ const App = () => {
         </a>
         {`: A website for personal asset management.`}
       </p>
+      <p>
+        <a href="https://hiiiike.yeslee.me" target="_blank" rel="noopener noreferrer">
+          Hiiiike
+        </a>
+        {`: Tools for hiking.`}
+      </p>
       {/* <p>
         <a
           href="https://pangolin.yeslee.me"
