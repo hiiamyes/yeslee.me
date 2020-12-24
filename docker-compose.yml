@@ -1,0 +1,10 @@
+version: "3"
+services:
+  cms:
+    image: ghost:3.40.2-alpine
+    # https://ghost.org/docs/config/
+    # env_file: ./services/cms/.env
+    volumes:
+      - ./services/cms/ghost/content:/var/lib/ghost/content
+    ports:
+      - 3022:2368
