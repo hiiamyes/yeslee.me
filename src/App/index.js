@@ -6,6 +6,7 @@ import HomePage from "./HomePage";
 import HundredPeaksPage from "./HundredPeaksPage";
 import TrailPage from "./TrailPage";
 import BlogPage from "src/App/BlogPage";
+import TaiwanRailwayToolsPage from 'src/App/TaiwanRailwayToolsPage'
 
 // import PeakPage from "./PeakPage";
 import { Switch, Route, Redirect } from "react-router-dom";
@@ -58,6 +59,9 @@ gtag('config', 'UA-41378150-9');
         </Route>
         <Route path="/trails/:name" exact>
           <TrailPage />
+        </Route>
+        <Route path="/taiwan-railway-tools" exact>
+          <TaiwanRailwayToolsPage />
         </Route>
         <Redirect from="/trails" to="/trails/yangtou" />
       </Switch>
