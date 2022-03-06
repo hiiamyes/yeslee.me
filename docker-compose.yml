@@ -1,10 +1,16 @@
 version: "3"
 services:
+  # cms:
+  #   image: ghost:4.36.1-alpine
+  #   # https://ghost.org/docs/config/
+  #   # env_file: ./services/cms/.env
+  #   volumes:
+  #     - ./services/cms/ghost/content:/var/lib/ghost/content
+  #   ports:
+  #     - 3022:2368
   cms:
-    image: ghost:3.40.2-alpine
-    # https://ghost.org/docs/config/
-    # env_file: ./services/cms/.env
+    build: ./services/cms/strapi
     volumes:
-      - ./services/cms/ghost/content:/var/lib/ghost/content
+      - ./services/cms/strapi:/srv/app
     ports:
-      - 3022:2368
+      - "1337:1337"

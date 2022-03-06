@@ -6,8 +6,8 @@
 
 ```
 docker-compose up -d
-open localhost:3022
-open localhost:3022/ghost
+open http://localhost:3022
+open http://localhost:3022/ghost
 ```
 
 ## Content API

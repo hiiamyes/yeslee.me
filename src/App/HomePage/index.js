@@ -15,13 +15,21 @@ const App = () => {
         {`: My blog.`}
       </p>
       <p>
+        <Link to="/blog-cms">Blog-CMS</Link>
+        {`: My blog.`}
+      </p>
+      <p>
         <a href="https://paaaack.com" target="_blank" rel="noopener noreferrer">
           Paaaack
         </a>
         {`: A website for personal asset management.`}
       </p>
       <p>
-        <a href="https://hiiiike.yeslee.me" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://hiiiike.yeslee.me"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Hiiiike
         </a>
         {`: Tools for hiking.`}
