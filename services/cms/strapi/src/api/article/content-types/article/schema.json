@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "Title": {
+    "title": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -24,7 +24,7 @@
       },
       "type": "string"
     },
-    "Content": {
+    "content": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -32,7 +32,7 @@
       },
       "type": "richtext"
     },
-    "Cover": {
+    "cover": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -47,17 +47,6 @@
           "localized": true
         }
       }
-    },
-    "test": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "dynamiczone",
-      "components": [
-        "test.test"
-      ]
     }
   }
 }

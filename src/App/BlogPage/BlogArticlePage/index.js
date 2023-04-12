@@ -12,7 +12,7 @@ const BlogPage = (props) => {
       const {
         data: { data },
       } = await axios.request({
-        url: `http://localhost:1337/api/articles/${id}`,
+        url: `${process.env.STRAPI_BASE_URL}/api/articles/${id}`,
         headers: {
           Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
         },

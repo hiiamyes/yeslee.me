@@ -15,16 +15,14 @@ const BlogPage = () => {
 
   useEffect(() => {
     (async () => {
-      console.log("qq");
       const {
         data: { data: articles },
       } = await axios.request({
-        url: "http://localhost:1337/api/articles",
+        url: `${process.env.STRAPI_BASE_URL}/api/articles`,
         headers: {
           Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
         },
       });
-      console.log(articles);
       setArticles(articles);
     })();
   }, []);
