@@ -7,6 +7,8 @@ import {
   faYoutube,
   faLinkedin,
   faGithub,
+  faInstagram,
+  faLine,
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(faMediumM);
@@ -14,6 +16,8 @@ library.add(faFacebook);
 library.add(faYoutube);
 library.add(faLinkedin);
 library.add(faGithub);
+library.add(faInstagram);
+library.add(faLine);
 
 const FAIcon = (props) => {
   const { style, icon } = props;

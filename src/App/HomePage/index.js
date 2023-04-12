@@ -75,11 +75,35 @@ const App = () => {
       <div>
         <a
           className="contact-link"
+          href="https://www.instagram.com/yeeeees.lee/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FAIcon icon={["fab", "instagram"]}></FAIcon>
+        </a>
+        <a
+          className="contact-link"
           href="https://www.facebook.com/profile.php?id=100000254874042"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FAIcon icon={["fab", "facebook"]}></FAIcon>
+        </a>
+        <a
+          className="contact-link"
+          href="https://line.me/ti/p/OMLy1Jb-tC"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FAIcon icon={["fab", "line"]}></FAIcon>
+        </a>
+        <a
+          className="contact-link"
+          href="https://www.linkedin.com/in/tsung-yeh-lee-3a558172/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FAIcon icon={["fab", "linkedin"]}></FAIcon>
         </a>
         <a
           className="contact-link"
@@ -104,14 +128,6 @@ const App = () => {
           rel="noopener noreferrer"
         >
           <FAIcon icon={["fab", "youtube"]}></FAIcon>
-        </a>
-        <a
-          className="contact-link"
-          href="https://www.linkedin.com/in/tsung-yeh-lee-3a558172/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FAIcon icon={["fab", "linkedin"]}></FAIcon>
         </a>
       </div>
     </Style>
