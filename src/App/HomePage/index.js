@@ -99,7 +99,7 @@ const App = () => {
         </a>
         <a
           className="contact-link"
-          href="https://www.linkedin.com/in/tsung-yeh-lee-3a558172/"
+          href="https://www.linkedin.com/in/tsung-yeh-lee/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -115,7 +115,7 @@ const App = () => {
         </a>
         <a
           className="contact-link"
-          href="https://medium.com/@hiiamyes"
+          href="https://medium.com/@yeeeeees"
           target="_blank"
           rel="noopener noreferrer"
         >
