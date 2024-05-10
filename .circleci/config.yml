@@ -15,6 +15,7 @@ jobs:
             aws --version
             cd apps/yeslee-me
             touch .env
+            cat .env
             ./scripts/config.sh
             ./scripts/push-web.sh
             ssh-keyscan ${LINODE_IP} >> ~/.ssh/known_hosts 
