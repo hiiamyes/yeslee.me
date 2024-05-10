@@ -16,7 +16,7 @@ jobs:
             ./scripts/push-web.sh
             ssh-keyscan ${LINODE_IP} >> ~/.ssh/known_hosts 
             ssh yes@${LINODE_IP} \<< EOF            
-              if [ -d ~/app/yeslee.me ]; then
+              if [ -d ~/app/yeslegit cme.me ]; then
                 cd ~/app/yeslee.me/
                 git pull
               else
