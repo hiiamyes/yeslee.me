@@ -1,5 +1,5 @@
 #!/bin/sh
-export $(egrep -v '^#' .env | xargs)
+# export $(egrep -v '^#' .env | xargs)
 
 web=$(
   cat ".env.example" |
