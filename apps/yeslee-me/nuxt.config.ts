@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       gtm: {
-        id: "",
+        id: "GTM-5DLND3S",
       },
     },
   },
