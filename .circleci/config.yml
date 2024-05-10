@@ -4,17 +4,20 @@ jobs:
     machine: true # uses default image circleci/classic:latest
     steps:
       - checkout
+      # - run:
+      #     command: |
+      #       curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      #       unzip -qq awscliv2.zip
+      #       sudo ./aws/install --update
+      #       aws --version
       - run:
           command: |
-            # curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-            # unzip -qq awscliv2.zip
-            # sudo ./aws/install --update
-            # aws --version
             cd apps/yeslee-me
-            echo ${PORT}
-            echo ${NUXT_PUBLIC_GTM_ID}
             touch .env
+            echo "PORT=${PORT}" >> .env
+            echo 'NUXT_PUBLIC_GTM_ID="${NUXT_PUBLIC_GTM_ID}"' >> .env
             cat .env
+            echo 
             ./scripts/config.sh
             # ./scripts/push-web.sh
             # ssh-keyscan ${LINODE_IP} >> ~/.ssh/known_hosts 
