@@ -1,12 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    // "@nuxtjs/tailwindcss",
-    "@zadigetvoltaire/nuxt-gtm",
-    "@nuxt/image",
-    "@nuxt/ui",
-  ],
+  modules: ["@zadigetvoltaire/nuxt-gtm", "@nuxt/image", "@nuxt/ui"],
+  colorMode: {
+    preference: "light",
+  },
   image: {
     cloudinary: {
       baseURL: "https://res.cloudinary.com/dsxispofm/image/upload/",
