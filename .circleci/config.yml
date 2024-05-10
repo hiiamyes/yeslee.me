@@ -11,7 +11,7 @@ jobs:
             sudo ./aws/install --update
             aws --version
             cd apps/yeslee-me
-            touch config/.env
+            touch .env
             ./scripts/config.sh
             ./scripts/push-web.sh
             ssh-keyscan ${LINODE_IP} >> ~/.ssh/known_hosts 
