@@ -25,6 +25,7 @@ jobs:
                 git clone git@github.com:hiiamyes/yeslee.me.git
                 cd yeslee.me/              
               fi
+              cd apps/yeslee-me
               ./scripts/pull-web.sh
               ./scripts/stop.sh
               ./scripts/start.sh
