@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@zadigetvoltaire/nuxt-gtm", "@nuxt/image", "@nuxt/ui"],
+  modules: [
+    "@zadigetvoltaire/nuxt-gtm",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxtjs/tailwindcss",
+  ],
   colorMode: {
     preference: "light",
   },

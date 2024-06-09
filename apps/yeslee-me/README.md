@@ -1,8 +1,9 @@
 # Getting Started
 
 ```
-yarn
-yarn dev
+pnpm i
+pnpm run dev
+open http://localhost:8089/
 ```
 
 # Deployment
