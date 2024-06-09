@@ -1,8 +1,9 @@
 FROM node:20-slim
 WORKDIR /app/
-COPY package.json yarn.lock* ./
-RUN yarn install --frozen-lockfile && npm install pm2 -g
+COPY package.json pnpm-lock.yaml ./
+RUN npm install -g pnpm
+RUN pnpm install --frozen-lockfile && npm install pm2 -g
 COPY . .
-RUN yarn build
+RUN pnpm build
 EXPOSE 8089
 CMD ["pm2-runtime", "start", "ecosystem.config.cjs"]
