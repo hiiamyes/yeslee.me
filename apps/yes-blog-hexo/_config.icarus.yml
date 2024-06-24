@@ -1,13 +1,14 @@
+# https://ppoffice.github.io/hexo-theme-icarus/
 # Version of the configuration file
 version: 5.1.0
 # Icarus theme variant, can be "default" or "cyberpunk"
 variant: default
 # Path or URL to the website's logo
-logo: /img/logo.svg
+logo: https://res.cloudinary.com/dsxispofm/image/upload/v1719246929/yeslee-me/favicon_qyit4y.png
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: /img/favicon.svg
+    favicon: https://res.cloudinary.com/dsxispofm/image/upload/v1719246929/yeslee-me/favicon_qyit4y.png
     # Web application manifests configuration
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
@@ -105,31 +106,31 @@ head:
 navbar:
     # Navigation menu items
     menu:
-        Home: /
+        Yeslee.me: https://yeslee.me
         # Archives: /archives
         # Categories: /categories
         # Tags: /tags
         # About: /about
     # Links to be shown on the right of the navigation bar
-    links:
-        Download on GitHub:
-            icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+    # links:
+    #     Download on GitHub:
+    #         icon: fab fa-github
+    #         url: https://github.com/ppoffice/hexo-theme-icarus
 # Page footer configurations
-footer:
-    # Copyright text
-    copyright: © 2019
-    # Links to be shown on the right of the footer section
-    links:
-        Creative Commons:
-            icon: fab fa-creative-commons
-            url: https://creativecommons.org/
-        Attribution 4.0 International:
-            icon: fab fa-creative-commons-by
-            url: https://creativecommons.org/licenses/by/4.0/
-        Download on GitHub:
-            icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+# footer:
+#     # Copyright text
+#     copyright: © 2019
+#     # Links to be shown on the right of the footer section
+#     links:
+#         Creative Commons:
+#             icon: fab fa-creative-commons
+#             url: https://creativecommons.org/
+#         Attribution 4.0 International:
+#             icon: fab fa-creative-commons-by
+#             url: https://creativecommons.org/licenses/by/4.0/
+#         Download on GitHub:
+#             icon: fab fa-github
+#             url: https://github.com/ppoffice/hexo-theme-icarus
 # Article related configurations
 article:
     # Code highlight settings
