@@ -2,12 +2,12 @@ title: Hexo
 subtitle: ''
 description: ''
 keywords: null
-author: John Doe
+author: Yes Lee
 language:
   - en
   - zh-tw
-timezone: ''
-url: http://example.com
+timezone: 'Asia/Taipei'
+url: https://blog.yeslee.me
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
 pretty_urls:
