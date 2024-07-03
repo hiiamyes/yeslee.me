@@ -7,10 +7,28 @@ useSeoMeta({
   ogImage:
     "https://res.cloudinary.com/dsxispofm/image/upload/h_360,w_360/profile.jpg",
 });
+
+const links = [{
+  label: 'Docs',
+  icon: 'i-heroicons-book-open',
+  to: '/getting-started'
+}, {
+  label: 'Pro',
+  icon: 'i-heroicons-square-3-stack-3d',
+  to: '/pro'
+}, {
+  label: 'Releases',
+  icon: 'i-heroicons-rocket-launch',
+  to: '/releases'
+}]
+
 </script>
 
 <template>
   <div class="p-4 grid gap-4 max-w-3xl m-auto">
+    <UHeader :links="links">
+      <!-- <ULink href="/">Yes Lee</ULink> -->
+    </UHeader>
     <NuxtImg
       preload
       class="w-52 border-4 border-gray-200 rounded-full"

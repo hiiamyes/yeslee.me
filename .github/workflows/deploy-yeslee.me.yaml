@@ -1,0 +1,72 @@
+# https://rajneesh-m49.medium.com/pushing-docker-image-to-ecr-in-a-correct-secure-way-d5f96a897e25
+
+name: deploy-yeslee.me
+
+on:
+  push:
+    branches:
+      - "master"
+    paths:
+      - "apps/yeslee.me/**"
+      - ".github/workflows/deploy-yeslee.me.yaml"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Install AWS CLI
+        uses: unfor19/install-aws-cli-action@v1
+
+      - name: Config AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: ${{ secrets.AWS_IAM_ROLE_GITHUB_ACTION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure environment and deploy web
+        env:
+          NEXT_PUBLIC_VERSION: 2.0.0
+        run: |
+          aws --version
+          cd apps/yeslee.me
+          touch .env.production
+          ./scripts/config.sh
+          cat .env.production
+          aws sts get-caller-identity
+          ./scripts/build.sh
+          ./scripts/push-web.sh
+
+      - name: SSH and Deploy to Server
+        env:
+          LINODE_IP: ${{ secrets.LINODE_IP }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan $LINODE_IP >> ~/.ssh/known_hosts
+          ssh -T yes@$LINODE_IP << EOF
+            if [ -d ~/app/yeslee.me ]; then
+              cd ~/app/yeslee.me/
+              git pull
+            else
+              mkdir -p ~/app/
+              cd ~/app/
+              git clone git@github.com:hiiamyes/yeslee.me.git
+              cd yeslee.me/
+            fi
+            cd apps/yeslee.me
+            ./scripts/pull-web.sh
+            ./scripts/stop.sh
+            ./scripts/start.sh
+          EOF
